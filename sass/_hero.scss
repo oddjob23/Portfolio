@@ -1,0 +1,40 @@
+.hero__header {
+    grid-area: header;
+    height: 100%;
+    z-index: 20;
+    section.hero__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 35vh max-content;
+        grid-template-areas: 
+        "heading heading . ."
+        "article article . .";
+       
+
+        hgroup.hero__content--header {
+            grid-area: heading !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .heading--1 {
+                color: $color-dark;
+                letter-spacing: 2px;
+            }
+            .heading--2 {
+                line-height: 1.571rem;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        article.hero__article {
+            grid-area: article !important;
+            margin-top: 4rem;
+            p {
+                color: $color-text;
+                font-family: $font-family-roboto;
+                font-weight: 400;
+            }
+        }
+    }
+}

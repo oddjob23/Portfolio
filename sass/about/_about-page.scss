@@ -1,0 +1,135 @@
+// color variables
+$color-light: #fafafa;
+$color-bg: #263238;
+$color-dark: #212121;
+$color-text: #6e6e6e;
+$color-red: #EC407A;
+$color-orange: #D84838; 
+$color-angular: #dd0031;
+$color-blue: #2aa9e0;
+$color-yellow: #f0db4f;
+$color-light-grey: #586F7C;
+$color-gray: rgba(0, 0, 0, 0.25);
+$color-bg-dark: rgba(28, 32, 34, 0.68);
+$color-border-bottom: #CFD8DC;
+$color-article-bg: #ECEFF1;
+$color-broj: #B0BEC5;
+
+//  footer colors
+$color-footer-bg: #263238;
+$color-footer-link:#BDBDBD;
+$color-footer-copyright: #9E9E9E;
+
+// shadow box
+$shadow-box: 2px 2px 8px 0px rgba(50, 50, 50, 0.55);
+
+// font-variables
+
+$font-family: 'Work Sans', sans-serif;
+$font-extra-light: 200;
+$font-light: 300;
+$font-medium: 400;
+$font-bold: 600;
+
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+.container-about {
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    ". . . head head head head head head head head ."
+    ". . . main main main main main main main main ."
+    ". . . footer footer footer footer footer footer footer footer .";
+    @media screen and (max-width: $breakpoint-md){
+ 
+        grid-template-areas: 
+        ". head head head head head head head head head head ."
+        ". main main main main main main main main main main ."
+        ". footer footer footer footer footer footer footer footer footer footer .";
+
+    }
+    header.header-about {
+        grid-area: head;
+        align-self: start;
+        margin-top: 8rem;
+        h3 {
+            color: $color-dark;
+        }
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: 
+        "image image image . article-1 article-1 article-1 article-1"
+        "article-2 article-2 article-2 article-2 article-2 article-2 article-2 article-2"
+        "article-3 article-3 article-3 article-3 article-3 article-3 article-3 article-3";
+        grid-gap: 2rem;
+        @media screen and (max-width: $breakpoint-md){
+            grid-template-areas: 
+            "image image image image article-1 article-1 article-1 article-1"
+            "article-2 article-2 article-2 article-2 article-2 article-2 article-2 article-2"
+            "article-3 article-3 article-3 article-3 article-3 article-3 article-3 article-3";
+        }
+        @media screen and (max-width: $breakpoint-sm){
+            grid-template-areas: 
+            "image image image image image image image image"
+            "article-1 article-1 article-1 article-1 article-1 article-1 article-1 article-1"
+            "article-2 article-2 article-2 article-2 article-2 article-2 article-2 article-2"
+            "article-3 article-3 article-3 article-3 article-3 article-3 article-3 article-3";
+            img {
+                display: none;
+            }
+            .profile {
+                margin-top: 0;
+            }
+            .bg-image{
+                justify-self: center;
+                display: block;
+                background-image: url('../../images/profile-image.png');
+                background-position: 0 -100px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+        }
+        .profile {
+            grid-area: image;
+            margin-top: 9rem;
+            img {
+                grid-row: 1/2;
+                height: 75%;
+                width: 90%;
+                box-shadow: $shadow-box;
+            }
+            .personal-info {
+                margin-top: 5rem;
+            }
+        }
+        .article-1 {
+            grid-area: article-1;
+            align-self: start;
+            margin-top: 2rem;
+            p {
+                padding-top: 2rem;
+            }
+        }
+        .article-2 {
+            grid-area: article-2;
+            header {
+                padding: 2rem 0;
+            }
+        }
+        .article-3 {
+            grid-area: article-3;
+        }
+    }
+}

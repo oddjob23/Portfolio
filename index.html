@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio website created by Milos Karaklajic in HTML5, CSS3 and JavaScript with library jQuery. This website uses the latest and most trening features in field of front-end web development"/>
+    <meta name="keywords" content="front-end developer, front-end, web development, back-end, full stack developer, HTML, CSS, JavaScript, JS, jQuery, JavaScript developer, CSS Grid, CSS3, HTML5, Vanilla JavaScript, web programer, web design, UI/UX design"/>
+    <meta name="author" content="Milos Karaklajic"/>
+    <title>Portfolio Website | Front End Web Developer</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,700" rel="stylesheet"/> 
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css"/>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="./css/swiper.css"/>
+    <!-- main style -->
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+<nav class="navigation">
+        <h1 class="navigation__logo">
+            <a href="index.html" class="navigation__logo-link">Milos Karaklajic</a>
+            <p class="subtext">Front End <span class="text-orange">Web Developer</span></p>
+        </h1>
+        <!-- navigation start -->
+        <ul class="navigation__menu">
+            <li class="navigation__menu--item">
+                <a href="index.html" class="navigation__menu--item-link active">
+                    <i class="navigation__menu--item-link-icon"></i>
+                    Home
+                </a>
+            </li>
+            <li class="navigation__menu--item">
+                <a href="about.html" class="navigation__menu--item-link">
+                    <i class="navigation__menu--item-link-icon"></i>
+                    About
+                </a>
+            </li>
+            <li class="navigation__menu--item">
+                <a href="work.html" class="navigation__menu--item-link">
+                    <i class="navigation__menu--item-link-icon"></i>
+                    Work
+                </a>
+            </li>
+            <li class="navigation__menu--item">
+                <a href="resume.html" class="navigation__menu--item-link">
+                    <i class="navigation__menu--item-link-icon"></i>
+                    Resume
+                </a>
+            </li>
+            <li class="navigation__menu--item">
+                <a href="contact.html" class="navigation__menu--item-link">
+                    <i class="navigation__menu--item-link-icon"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+        <!-- social bar -->
+        <ul class="navigation__social">
+            <li class="navigation__social--item">
+                <a href="" class="navigation__social--item-link">
+                    <i class="navigation__social--item-link-icon fab fa-github"></i>
+                </a>
+            </li>
+            <li class="navigation__social--item">
+                <a href="" class="navigation__social--item-link">
+                    <i class="navigation__social--item-link-icon fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="navigation__social--item">
+                <a href="" class="navigation__social--item-link">
+                    <i class="navigation__social--item-link-icon fab fa-twitter-square"></i>
+                </a>
+            </li>
+            <li class="navigation__social--item">
+                <a href="" class="navigation__social--item-link">
+                    <i class="navigation__social--item-link-icon fab fa-instagram"></i>
+
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="menu-button" id="menu-btn">
+            <i class="fal fa-ellipsis-v"></i>
+        </div>
+        
+        <!-- end of nav -->
+        <!-- header start -->
+
+        <header class="hero__header">
+            <section class="hero__content">
+                <hgroup class="hero__content--header">
+                    <h1 class="heading--1">Hi, My Name Is Milos</h1>
+                    <h2 class="heading--2">Front End Web <span class="txt-type text-orange" data-wait="3000" data-words='["Developer","Designer","Creator"]'>Developer</span></h2>
+                </hgroup>
+                <article class="hero__article">
+                    <p class="hero__article--text">
+                        Positive attitude, team work oriented, professional, reliable, creative, on point, funny, hard-working.
+                        These are the things people say about me, I swear.
+                    </p>
+                </article>
+            </section>
+        </header>
+
+        <!-- end of header -->
+        <section class="featured-work">
+            <header>
+                <h3 class="heading--3">Featured Work</h3>
+            </header>
+            <article class="project">
+                <!-- slider -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="width swiper-slide">
+                            <img src="./images/project01.PNG" alt="CSS Grid project"/>
+                        </div>
+                        <div class="swiper-slide image">
+                            <img src="./images/project02.PNG" alt="Bootstrap 4 layout"/>
+                        </div>
+                        <div class="width swiper-slide">
+                            <img src="./images/project04.PNG" alt="JavaScript Project"/>
+                        </div>
+                        <div class="width swiper-slide">
+                            <img src="./images/project03.PNG" alt="JavaScript Project"/>
+                        </div>
+                        <div class="width swiper-slide">
+                            <img src="./images/project05.PNG" alt="Todo App built in JavaScript and CSS Materialize"/>
+                        </div>
+                    </div>
+                    <!-- arrows -->
+                    <div class="swiper-button-next">
+                        <i class="far fa-angle-right" id="right-arrow"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="far fa-angle-left" id="left-arrow"></i>
+                    </div>
+                </div>
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
+            </article>
+        </section>
+
+        <!-- end of images -->
+
+        <section class="services">
+            <h3 class="heading--3">Services</h3>
+
+            <article class="services__grid">
+                <section class="article--1">
+                    <header>
+                        <span class="broj">01</span>
+                        <h4 class="article-heading heading--4">Web Development</h4>
+                    </header>
+                    <p>
+                        Developing full website from scratch with latest standards in front end web technologies. Designing responsive and interactive websites, transforming it into properly written code and optimized for performance. Technologies that I can offer: HTML5, CSS3 (flexbox, grid), Bootstrap 3 and 4, JavaScript, jQuery, responsive design, SEO.
+                    </p>
+                </section>
+                <section class="article--2">
+                    <header>
+                        <span class="broj">02</span>
+                        <h4 class="article-heading heading--4">Web Design / UI - UX Design</h4>
+                    </header>
+                    <p>
+                        Transforming your idea into full and live website. Both for small business and for big ones, if you have idea we can transform it into web service for your potential clients! I offer experience in most popular design programs such as Adobe Photoshop and Adobe XD.
+                    </p>
+                </section>
+                <section class="article--3">
+                    <header>
+                        <span class="broj">03</span>
+                        <h4 class="article-heading heading--4">Website Maintenance</h4>
+                    </header>
+                    <p>
+                        Fixing wired bugs in different browsers on your site. Adding and changing content on already built site, adding images, changing interactivity, adding new features. Writing web content for your products in order to make it perfect for seach engines, proper HTML and website structure for SEO.
+                    </p>
+                </section>
+            </article>
+        </section>
+
+        <!-- End of Services -->
+
+
+        <section class="skills">
+            <header>
+                <h3 class="heading--3">My Skills</h3>
+            </header>
+            <div class="box HTML">
+                <i class="fab fa-html5"></i>
+            </div>
+            <div class="box CSS">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="box JS">
+                <i class="fab fa-js"></i>
+            </div>
+            <div class="box Angular">
+                <i class="fab fa-angular"></i>
+            </div>
+            <div class="box Python">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="card-skill front-end-skills">
+                <h4>Front End Skills</h4>
+                <ul>
+                    <li>HTML 5</li>
+                    <li>CSS 3 - Flexbox, Grid</li>
+                    <li>Bootstrap 3</li>
+                    <li>Bootstrap 4</li>
+                    <li>Materialize CSS</li>
+                    <li>Semantic UI</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                </ul>
+            </div>
+            <div class="card-skill web-design-skills">
+                <h4>Web Design / UI-UX design</h4>
+                <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe XD</li>
+                    <li>Prototyping</li>
+                    <li>Wireframing</li>
+                </ul>
+            </div>
+            <div class="card-skill other-skills">
+                <h4>Other Skills</h4>
+                <ul>
+                    <li>Project Management</li>
+                    <li>Git / GitHub</li>
+                    <li>Windows / Mac / Linux</li>
+                    <li>Data Analysis</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- end of skills section -->
+
+        <footer class="footer">
+            <section class="footer__content">
+                <a href="index.html" class="logo">Milos <span class="text-orange">Karaklajic</span></a>
+                <nav class="footer__navigation">
+                    <ul class="footer__menu">
+                        <li class="footer__menu--item">
+                            <a href="index.html" class="footer__menu--item-link">
+                                <i class="footer__menu--item-link-icon"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer__menu--item">
+                            <a href="about.html" class="footer__menu--item-link">
+                                <i class="footer__menu--item-link-icon"></i>
+                                About
+                            </a>
+                        </li>
+                        <li class="footer__menu--item">
+                            <a href="work.html" class="footer__menu--item-link">
+                                <i class="footer__menu--item-link-icon"></i>
+                                Work
+                            </a>
+                        </li>
+                        <li class="footer__menu--item">
+                            <a href="resume.html" class="footer__menu--item-link">
+                                <i class="footer__menu--item-link-icon"></i>
+                                Resume
+                            </a>
+                        </li>
+                        <li class="footer__menu--item">
+                            <a href="contact.html" class="footer__menu--item-link">
+                                <i class="footer__menu--item-link-icon"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- social bar -->
+                    <ul class="navigation__social">
+                        <li class="navigation__social--item">
+                            <a href="https://github.com/oddjob23" target="_blank"  class="navigation__social--item-link">
+                                <i class="navigation__social--item-link-icon fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="navigation__social--item">
+                            <a href="https://www.linkedin.com/in/milos-karaklajic-7a5736bb/"  target="_blank" class="navigation__social--item-link">
+                                <i class="navigation__social--item-link-icon fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="navigation__social--item">
+                            <a href="https://twitter.com/ThisIsGuzz" target="_blank" class="navigation__social--item-link">
+                                <i class="navigation__social--item-link-icon fab fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li class="navigation__social--item">
+                            <a href="https://www.instagram.com/__milos_23/" target="_blank" class="navigation__social--item-link">
+                                <i class="navigation__social--item-link-icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>  
+                </nav>
+                <p class="copyright">Designed and Developed by Milos <span class="text-orange">Karaklajic.</span> All rights reserved &copy;Copyright</p>
+            </section>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+<!-- javascript -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>	
+<!-- swiper -->>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/slide-menu.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

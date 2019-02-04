@@ -1,0 +1,41 @@
+.footer {
+    margin-top: 8rem;
+    background: url('../images/footer-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-footer-bg;
+    grid-area: footer;
+
+    &__content {
+        padding: 4rem 0;
+        a.logo {
+            display: block;
+            text-align: center;
+            color: $color-light;
+            font-size: 3.4rem;
+        }
+        .footer__navigation {
+            .footer__menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                li {
+                    padding-left: 1.2rem;
+                    a {
+                        color: $color-footer-link;
+                        padding: 0 6px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in;
+                        font-size: 1.8rem;
+                        &:hover {
+                            color: $color-orange;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

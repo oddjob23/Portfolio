@@ -1,0 +1,82 @@
+.skills {
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
+    grid-template-areas:
+    "header header header header header"
+    "html css js angular python"
+    "front front web web other";
+    header {
+        grid-area: header;
+        padding-bottom: 3rem;
+    }
+    .box {
+        align-self: center;
+        justify-self: center;
+        i.fab {
+            display: block;
+            font-size: 15rem;
+            transition: all 0.2s ease-in;
+        }
+    }
+    .HTML {
+        grid-area: html;
+        transition: all 0.2s ease-in;
+        i.fa-html5:hover {
+            color: $color-orange;
+        }
+    }
+    .CSS {
+        grid-area: css;
+        i.fa-css3-alt:hover {
+            color: $color-blue;
+        }
+    }
+    .JS {
+        grid-area: js;
+        i.fa-js:hover {
+            color: $color-yellow;
+        }
+    }
+    .Angular {
+        grid-area: angular;
+        i.fa-angular:hover {
+            color: $color-angular;
+        }
+    }
+    .Python {
+        grid-area: python;
+        i.fa-python:hover {
+            color: #3775a4; // python blue
+        }
+    }
+    .card-skill {
+        text-align: center;
+        background-color: $color-article-bg;
+        box-shadow: $shadow-box;
+        margin-top: 4rem;
+        h4 {
+            margin: 2rem 0 4rem 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-evenly;
+            li {
+                padding: 0.4rem 0;
+                text-transform: uppercase;
+                font-family: $font-family-roboto;
+            }
+        }
+    }
+    .front-end-skills {
+        grid-area: front;
+    }
+    .web-design-skills {
+        grid-area: web;
+    }
+    .other-skills {
+        grid-area: other;
+    }
+}

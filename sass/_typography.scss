@@ -1,0 +1,110 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+// headings
+
+.heading--1 {
+    font-size: 3.8rem;
+    font-weight: $font-bold;
+    letter-spacing: 0.0175em;
+}
+.heading--2 {
+    font-size: 3rem;
+    font-weight: $font-bold;
+    letter-spacing: 0.0175em;
+}
+.heading--3 {
+    font-size: 2.4rem;
+    font-weight: $font-bold;
+    letter-spacing: 0.0175em;
+}
+
+
+.text-orange {
+    color: $color-orange;
+}
+.broj {
+    font-weight: 600;
+    font-size: 5rem;
+    color: $color-broj;
+}
+.copyright {
+    padding-top: 2rem;
+    color: $color-footer-copyright;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none
+}
+p {
+    span {
+        color: $color-angular;
+    }
+    strong {
+        font-weight: 400;
+        color: $color-angular;
+    }
+}
+article p {
+    padding-top: 2rem;
+}
+
+.active {
+    color: $color-orange;
+}
+
+// resume page typography
+
+.year {
+    background-color: $color-dark;
+    display: inline-block;
+    padding: 1px 6px;
+    color: $color-light;
+    margin-left: 22px;
+    font-weight: 400;
+    margin-bottom: 11px;
+    margin-top: 11px;
+    font-size: 1.2rem;
+    &::before {
+        margin-top: 6px;
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        background-color: $color-red;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        box-shadow: $shadow-box-2;
+    }
+}
+.github-btn {
+    padding: 1.2rem;
+    border: 2px solid $color-dark;
+    background: transparent;
+    transition: all 0.2s ease-in;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    box-shadow: $shadow-box-2;
+    font-weight: 600;
+    &:hover {
+        background-color: $color-yellow;
+        color: #fff;
+    }
+    @media screen and (max-width: $breakpoint-sm){
+        padding: 0.8rem;
+        font-size: 1.6rem;
+    }
+}

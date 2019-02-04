@@ -1,0 +1,165 @@
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+.container-work {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 5rem;
+    grid-template-areas: 
+    ". . . heading heading heading heading heading heading heading heading ."
+    ". . . images images images images images images images images ."
+    ". . . images images images images images images images images ."
+    ". . . images images images images images images images images ."
+    ". . . footer footer footer footer footer footer footer footer .";
+
+    @media screen and (max-width: $breakpoint-md) {
+        grid-template-areas: 
+        ". heading heading heading heading heading heading heading heading heading heading ."
+        ". images images images images images images images images images images ."
+        ". images images images images images images images images images images ."
+        ". footer footer footer footer footer footer footer footer footer footer .";
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "heading"
+        "images"
+        "footer";
+        padding: 0 2rem;
+    }
+    &__header {
+        grid-area: heading;
+        align-self: end;
+        margin-top: 8rem;
+    }
+    .projects-showcase {
+        grid-area: images;
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 8rem, auto;
+        grid-row-gap: 2rem;
+
+        grid-template-areas: 
+        "card-image1 card-image2"
+        "card-image3 card-image4"
+        "card-image5 .";
+
+        grid-column-gap: 2rem;
+        @media screen and (max-width: $breakpoint-lg) {
+            grid-template-areas: 
+            "card-image1 card-image1"
+            "card-image2 card-image2"
+            "card-image3 card-image3"
+            "card-image4 card-image4"
+            "card-image5 card-image5";
+        } 
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "card-image1"
+            "card-image2"
+            "card-image3"
+            "card-image4"
+            "card-image5";
+            grid-row-gap: 3rem;
+            div.card {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "description"
+                "image";
+                grid-row-gap: 4rem;
+                .img {
+                    grid-area: image;
+                }
+                .img-description {
+                    grid-area: description;
+                }
+                .button {
+                    margin-top: 2rem;
+                }
+            }
+            
+        }
+        .card {
+            display: grid;
+            grid-template-areas: 1fr 1fr;
+            grid-template-areas: 
+            "image description"
+            "image description"
+            "image description";
+            grid-column-gap: 2rem;
+            background-color: $color-article-bg;
+            padding: 2rem;
+            .img {
+                grid-area: image;
+            }
+            .img-description {
+                grid-area: description;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "naslov"
+                "lista"
+                "button";
+                h3 {
+                    grid-area: naslov;
+                    text-align: center;
+                    padding: padding 0 1.2rem 0 1.2rem;
+                }
+                ul {
+                    grid-area: lista;
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        text-align: center;
+                        padding: 0 0 2rem 0;
+                    }
+                    li {
+                        padding: .8rem 0.5rem;
+                        text-align: center;
+                    }
+                }
+                .button {
+                    grid-area: button;
+                    justify-self: center;
+                }
+            }
+
+        }
+        .card-image1 {
+            grid-area: card-image1;
+        }
+        .card-image2 {
+            grid-area: card-image2;
+        }
+        .card-image3 {
+            grid-area: card-image3;
+        }
+        .card-image4 {
+            grid-area: card-image4;
+        }
+        .card-image5 {
+            grid-area: card-image5;
+        }
+        .images {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+            grid-column-gap: 3rem;
+            img {
+                width: 100%;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 2rem;
+            }
+        }
+    }
+    .container-work .footer {
+        grid-area: footer;
+    }
+}

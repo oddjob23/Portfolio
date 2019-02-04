@@ -1,0 +1,83 @@
+.navigation {
+    grid-area:navigation;
+    height: 100%;
+    background-color: $color-bg;
+    position: fixed;
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+    box-shadow: $shadow-box;
+    &__logo {
+        text-align: center;
+        padding-top: 12rem;
+        a {
+            font-size: 1.9rem;
+            color: $color-light;
+        }
+        .subtext {
+            font-size: 1.4rem;
+            color: $color-light-grey;
+        }
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--item {
+            padding: 0.2rem 0;
+            text-align: center;
+            &-link:link,
+            &-link:visited {
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: $font-bold;
+                transition: color 0.2s ease-in;
+                position: relative;
+                text-align: center;
+            }
+            &-link:hover {
+                color: $color-orange;
+            }
+            &-link::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.8);
+                width: 0%;
+                left: 50%;
+                right: 50%;
+                transition: all 0.3s ease-in;
+                transform-origin: 50%;
+            }
+            &-link:hover::after {
+                width: 100%;
+                left: 0;
+                right: 0;
+                color: $color-orange;
+            }
+
+        }
+    }
+
+    // social menu
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--item {
+            padding: 1rem 1rem;
+            color: #fff;
+            &-link:hover {
+                i {
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+}

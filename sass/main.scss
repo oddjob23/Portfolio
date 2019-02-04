@@ -1,0 +1,14 @@
+@import "base";
+@import "typography";
+@import "navigation";
+@import "hero";
+@import "featured";
+@import "animations";
+@import "services";
+@import "skills";
+@import "footer";
+// pages
+@import "./about/about-page";
+@import "./work/work";
+@import "./resume/resume";
+@import "./contact/contact";

@@ -1,0 +1,59 @@
+.featured-work {
+    grid-area: feature;
+    z-index: 20;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+    "header header header header header header"
+    "image image image image image image";
+    header {
+        grid-area: header;
+        padding: 3rem 0;
+    }
+    article.project {
+        position: relative;
+        grid-area: image;
+            div.swiper-pagination {
+                grid-area: progressbar;
+                align-self: center;
+            }
+            .swiper-button-next {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                z-index: 9;
+                width: 44px;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition-duration: .2s;
+                text-align: center;
+                line-height: 8rem;
+               #right-arrow {
+                    font-size: 8rem;
+                    color: $color-orange;
+                    display: block;
+                    transform: translateY(-10px);
+               }
+            }
+            .swiper-button-prev {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                z-index: 9;
+                width: 44px;
+                height: 60px;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition-duration: .2s;
+                text-align: center;
+                line-height: 8rem;
+               #left-arrow {
+                    font-size: 8rem;
+                    color: $color-orange;
+                    display: block;
+                    transform: translateY(-10px);
+               }
+            }
+        }
+    }

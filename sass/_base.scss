@@ -1,0 +1,385 @@
+// color variables
+$color-light: #fafafa;
+$color-bg: #263238;
+$color-dark: #212121;
+$color-text: #6e6e6e;
+$color-red: #EC407A;
+$color-orange: #D84838; 
+$color-angular: #dd0031;
+$color-blue: #2aa9e0;
+$color-green: #4CAF50;
+$color-yellow: #f0db4f;
+$color-light-grey: #586F7C;
+$color-gray: rgba(0, 0, 0, 0.25);
+$color-bg-dark: rgba(28, 32, 34, 0.68);
+$color-border-bottom: #CFD8DC;
+$color-article-bg: #ECEFF1;
+$color-broj: #B0BEC5;
+
+//  footer colors
+$color-footer-bg: #263238;
+$color-footer-link:#BDBDBD;
+$color-footer-copyright: #9E9E9E;
+
+// shadow box
+$shadow-box: 2px 2px 8px 0px rgba(50, 50, 50, 0.55);
+$shadow-box-2: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.12);
+
+// font-variables
+
+$font-family: 'Work Sans', sans-serif;
+$font-family-roboto: 'Roboto Condensed', sans-serif;
+$font-extra-light: 200;
+$font-light: 300;
+$font-medium: 400;
+$font-bold: 600;
+
+// breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    height: 100%;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: $font-light;
+    font-family: $font-family;
+    color: $color-text;
+    // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7)  0%, rgba(255, 255, 255, 0.7) 100%) url('../images/bg-image.jpg') repeat 0 0;
+}
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 17% 6rem repeat(9, 1fr) 6rem;
+    grid-template-areas:
+    "navigation . header header header header header header header header header header"
+    "navigation . feature feature feature feature feature feature feature feature feature ."
+    "navigation . services services services services services services services services services ."
+    "navigation . skills skills skills skills skills skills skills skills skills ."
+    "navigation . footer footer footer footer footer footer footer footer footer .";
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.7)  0%, rgba(255, 255, 255, 0.7) 100%), url('../images/bg-image.jpg') repeat 0 0;
+}
+img {
+    width: 100%;
+    height: 95%;
+}
+
+// media queries
+
+@media screen and (max-width: $breakpoint-xl){
+    html {
+        font-size: 55%;
+    }
+
+    section.services {
+        article.services__grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+@media screen and (max-width: $breakpoint-lg) {
+
+    nav.navigation {
+        padding: 0 2rem;
+    }
+    .container {
+        .menu-button {
+            display: none;
+            i {
+                display: none;
+            }
+        }
+    }
+    .hero__content{
+        grid-template-areas:
+        "heading heading heading ."
+        "article article . .";
+    }
+    .heading--1 {
+        font-size: 3.4rem;
+    }
+    .heading--2 {
+        font-size: 1.7rem;
+    }
+    section.services {
+        article.services__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 2rem;
+            grid-template-areas:
+            "article-1"
+            "article-2"
+            "article-3";
+
+            .article--1 {
+                grid-area: article-1;
+            }
+            .article--2 {
+                grid-area: article-2;
+            }
+            .article--3 {
+                grid-area: article-3;
+            }
+        }
+    }
+    section.skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "head"
+        "html css js"
+        "angular python .";
+        section.skills > header {
+            grid-area: head;
+        }
+        .HTML {
+            grid-area: html;
+        }
+        .CSS {
+            grid-area: css;
+        }
+        .JS {
+            grid-area: js;
+        }
+        .Angular {
+            grid-area: angular;
+        }
+        .Python {
+            grid-area: python;
+        }
+    }
+
+}
+@media screen and (max-width: $breakpoint-md){
+    .container {
+        display: grid;
+        grid-template-columns: 8rem repeat(9, 1fr);
+        grid-template-areas:
+        ". header header header header header header header header ."
+        ". feature feature feature feature feature feature feature feature ."
+        ". services services services services services services services services ."
+        ". skills skills skills skills skills skills skills skills ."
+        ". footer footer footer footer footer footer footer footer .";
+    }
+    .conatiner-about {
+        background-color: blue !important;
+    }
+    .container {
+        .menu-button {
+            display: block;
+            i {
+                display: block;
+            }
+        }
+    }
+    .container-about {
+        grid-template-areas: 
+    "head head head head head head head head ."
+    "main main main main main main main main ."
+    "footer footer footer footer footer footer footer footer .";
+        position: relative;
+    }
+    .menu-button {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $color-orange;
+        z-index: 80 !important;
+        border-radius: 50%;
+        width: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+        display: block;
+        box-shadow: $shadow-box;
+        text-align: center;
+        i.fa-ellipsis-v {
+            display: block;
+            color: $color-light;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 40px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        i.fal.fa-arrow-left {
+            display: block;
+            color: $color-light;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 40px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+    }
+    nav.navigation {
+        width: 0;
+        opacity: 0;
+    }
+    header.hero__header {
+        section.hero__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            .hero__content--header {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+            }
+            .hero__article {
+                grid-column: 1/-1;
+                grid-row: 2/3;
+            }
+        }
+    }
+    .swiper-slide {
+        width: 50% !important;
+        margin-right: 2rem;
+    }
+
+    // services
+    section.services {
+        article.services__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-row-gap: 1.8rem;
+            grid-template-areas:
+            "article-1"
+            "article-2"
+            "article-3"; 
+        }
+        .article--1 {
+            grid-area: article-1;
+        }
+        .article--2 {
+            grid-area: article-2;
+        }
+        .article--3 {
+            grid-area: article-3;
+        }
+    }
+    // skills section
+
+    section.skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2rem;
+        grid-template-areas:
+        "header header"
+        "HTML CSS"
+        "JS Angular"
+        "python python"
+        "front front"
+        "web web"
+        "other other";
+        header {
+            grid-area: header;
+        }
+        .HTML{
+            grid-area: HTML;
+        }
+        .CSS {
+            grid-area: CSS;
+        }
+        .JS {
+            grid-area: JS;
+        }
+        .Angular {
+            grid-area: Angular;
+        }
+        .Pythong {
+            grid-area: python;
+        }
+    }
+}
+
+// small breakpoint
+
+@media screen and (max-width: $breakpoint-sm) {
+    .container {
+        display: grid;
+        grid-template-columns:repeat(8, 1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "feature feature feature feature feature feature feature feature"
+        "services services services services services services services services"
+        "skills skills skills skills skills skills skills skills"
+        "footer footer footer footer footer footer footer footer";
+        padding: 0 10px;
+    }
+    .menu-button {
+        left: -1rem;
+    }
+    section.featured-work {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "image";
+        header {
+            grid-area: header;
+        }
+        .project {
+            grid-area: image;
+        }
+    }
+    section.services {
+        article.services__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+            grid-row-gap: 1.8rem;
+            grid-template-areas:
+            "article-1"
+            "article-2"
+            "article-3"; 
+        }
+        .article--1 {
+            grid-area: article-1;
+        }
+        .article--2 {
+            grid-area: article-2;
+        }
+        .article--3 {
+            grid-area: article-3;
+        }
+    }
+    .swiper-slide{
+        width: 100% !important;
+    }
+    footer {
+        ul {
+            li {
+                padding-left: 0.4rem;
+                a {
+                    font-size: 1.4rem !important;
+                }
+            }
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
