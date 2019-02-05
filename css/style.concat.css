@@ -292,6 +292,7 @@ article p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.12); }
 
 .github-btn {
+  display: block;
   padding: 1.2rem;
   border: 2px solid #212121;
   background: transparent;
@@ -307,6 +308,10 @@ article p {
     .github-btn {
       padding: 0.8rem;
       font-size: 1.6rem; } }
+
+p.error {
+  color: #dd0031;
+  font-size: 1.8rem; }
 
 .navigation {
   grid-area: navigation;
@@ -689,7 +694,7 @@ article p {
         grid-row-gap: 3rem; }
         .container-work .projects-showcase div.card {
           grid-template-columns: 1fr;
-          grid-template-areas: "description" "image";
+          grid-template-areas: "description" "image" "button";
           grid-row-gap: 4rem; }
           .container-work .projects-showcase div.card .img {
             grid-area: image; }
@@ -700,17 +705,22 @@ article p {
     .container-work .projects-showcase .card {
       display: grid;
       grid-template-areas: 1fr 1fr;
-      grid-template-areas: "image description" "image description" "image description";
+      grid-template-areas: "image description" "image description" "image description" "button button";
       grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
       background-color: #ECEFF1;
-      padding: 2rem; }
+      box-shadow: 2px 2px 8px 0px rgba(50, 50, 50, 0.55); }
       .container-work .projects-showcase .card .img {
-        grid-area: image; }
+        grid-area: image;
+        border-bottom: 1px solid #fafafa; }
       .container-work .projects-showcase .card .img-description {
         grid-area: description;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: "naslov" "lista" "button"; }
+        grid-template-areas: "naslov" "lista";
+        border-bottom: 1px solid #fafafa;
+        padding-right: 2rem;
+        padding-top: 2rem; }
         .container-work .projects-showcase .card .img-description h3 {
           grid-area: naslov;
           text-align: center;
@@ -725,9 +735,11 @@ article p {
           .container-work .projects-showcase .card .img-description ul li {
             padding: .8rem 0.5rem;
             text-align: center; }
-        .container-work .projects-showcase .card .img-description .button {
-          grid-area: button;
-          justify-self: center; }
+      .container-work .projects-showcase .card .button {
+        grid-area: button;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 2rem; }
     .container-work .projects-showcase .card-image1 {
       grid-area: card-image1; }
     .container-work .projects-showcase .card-image2 {
@@ -813,7 +825,9 @@ article p {
         .container-resume .resume-items .item-2 {
           grid-area: edu-article-2; }
         .container-resume .resume-items .item-3#uni {
-          grid-area: edu-article-3; }
+          grid-area: edu-article-3;
+          border-bottom: 2px solid #eee;
+          padding-bottom: 4rem; }
         .container-resume .resume-items .item-4 {
           grid-area: work-article-1; }
         .container-resume .resume-items .item-5 {
@@ -919,27 +933,19 @@ article p {
         .container .form-wrapper form .form-group input[type="email"]:focus,
         .container .form-wrapper form .form-group textarea:focus {
           border-bottom: 2px solid #4CAF50; }
-        .container .form-wrapper form .form-group input[type="text"]:not(:placeholder-shown),
-        .container .form-wrapper form .form-group input[type="email"]:not(:placeholder-shown),
-        .container .form-wrapper form .form-group textarea:not(:placeholder-shown) {
+        .container .form-wrapper form .form-group input[type="text"]:placeholder-shown,
+        .container .form-wrapper form .form-group input[type="email"]:placeholder-shown,
+        .container .form-wrapper form .form-group textarea:placeholder-shown {
           border-color: #EC407A; }
         .container .form-wrapper form .form-group input[type="text"]:not(:placeholder-shown) + label,
         .container .form-wrapper form .form-group input[type="email"]:not(:placeholder-shown) + label,
         .container .form-wrapper form .form-group textarea:not(:placeholder-shown) + label {
           transform: translateY(-17px);
           left: -26px; }
-        .container .form-wrapper form .form-group input[type="text"]:invalid, .container .form-wrapper form .form-group input[type="text"]:invalid,
+        .container .form-wrapper form .form-group input[type="text"]:invalid,
         .container .form-wrapper form .form-group input[type="email"]:invalid,
-        .container .form-wrapper form .form-group input[type="email"]:invalid,
-        .container .form-wrapper form .form-group textarea:invalid,
         .container .form-wrapper form .form-group textarea:invalid {
           border-color: #EC407A; }
-        .container .form-wrapper form .form-group input[type="text"]:valid, .container .form-wrapper form .form-group input[type="text"]:valid,
-        .container .form-wrapper form .form-group input[type="email"]:valid,
-        .container .form-wrapper form .form-group input[type="email"]:valid,
-        .container .form-wrapper form .form-group textarea:valid,
-        .container .form-wrapper form .form-group textarea:valid {
-          border-color: #4CAF50; }
         .container .form-wrapper form .form-group input[type="text"]:focus + label,
         .container .form-wrapper form .form-group input[type="text"]:focus + label,
         .container .form-wrapper form .form-group input[type="email"]:focus + label,

@@ -70,7 +70,8 @@ $breakpoint-xl: 1200px;
                 grid-template-columns: 1fr;
                 grid-template-areas: 
                 "description"
-                "image";
+                "image"
+                "button";
                 grid-row-gap: 4rem;
                 .img {
                     grid-area: image;
@@ -90,12 +91,15 @@ $breakpoint-xl: 1200px;
             grid-template-areas: 
             "image description"
             "image description"
-            "image description";
+            "image description"
+            "button button";
             grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
             background-color: $color-article-bg;
-            padding: 2rem;
+            box-shadow: $shadow-box;
             .img {
                 grid-area: image;
+                border-bottom: 1px solid #fafafa;
             }
             .img-description {
                 grid-area: description;
@@ -103,8 +107,10 @@ $breakpoint-xl: 1200px;
                 grid-template-columns: 1fr;
                 grid-template-areas: 
                 "naslov"
-                "lista"
-                "button";
+                "lista";
+                border-bottom: 1px solid $color-light;
+                padding-right: 2rem;
+                padding-top: 2rem;
                 h3 {
                     grid-area: naslov;
                     text-align: center;
@@ -123,10 +129,12 @@ $breakpoint-xl: 1200px;
                         text-align: center;
                     }
                 }
-                .button {
-                    grid-area: button;
-                    justify-self: center;
-                }
+            }
+            .button {
+                grid-area: button;
+                justify-self: center;
+                align-self: center;
+                margin-bottom: 2rem;
             }
 
         }

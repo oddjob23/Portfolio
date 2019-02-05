@@ -1,12 +1,12 @@
-// constructive function
+// konstruktivna funkcija
 
 const TypeWriter = function(txtElement, words, wait=3000){
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = '' // sta god da je otkucano u span-u
+    this.txtElement = txtElement; // span
+    this.words = words; // data-words array
+    this.txt = '' // sta god da je otkucano u span-u, text value
     this.wordIndex = 0; // default frist word
     this.wait = parseInt(wait, 10);
-    this.type();
+    this.type(); // main method
     this.isDeleting = false; 
 }
 // Type Method
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'))
+    const words = JSON.parse(txtElement.getAttribute('data-words')) // parsing attribute value
     const wait = txtElement.getAttribute('data-wait');
 
-    // Start the typeWriter
+    // Start the TypeWriter
 
     new TypeWriter(txtElement, words, wait)
 }

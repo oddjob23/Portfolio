@@ -91,6 +91,7 @@ article p {
     }
 }
 .github-btn {
+    display: block;
     padding: 1.2rem;
     border: 2px solid $color-dark;
     background: transparent;
@@ -107,4 +108,8 @@ article p {
         padding: 0.8rem;
         font-size: 1.6rem;
     }
+}
+p.error {
+    color: $color-angular;
+    font-size: 1.8rem;
 }

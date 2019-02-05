@@ -12,14 +12,14 @@ $email_address = $_POST['email'];
 $message = $_POST['message'];
 
 
-if( empty($errors))
+if(empty($errors))
     {
         $to = $myemail;
-        $email_subject = "Message from: $name";
+        $email_subject = "New Message From: $name";
         $email_body = "Nova poruka od posetioca. ".
-        " Detalji poruke:\n Name: $name \n ".
+        " Sadrzaji poruke:\n Name: $name \n ".
         "Email: $email_address\n Message \n $message";
-        $headers = "From: $myemail\n";
+        $headers = "From: $email_address\n";
         $headers .= "Reply-To: $email_address";
         mail($to,$email_subject,$email_body,$headers);
     }

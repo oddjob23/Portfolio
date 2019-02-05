@@ -72,33 +72,29 @@
                 input[type="email"],
                 textarea {
                     width: 100%;
-                   border: none;
-                   border-bottom: 2px solid #9e9e9e;
-                   outline: none;
-                   height: 40px; 
-                   color: #262626;
-                   background-color: transparent;
-                   font-size: 1.6rem;
-                   box-sizing: border-box;
-                   transition: border-bottom 0.2s ease-out;
+                    border: none;
+                    border-bottom: 2px solid #9e9e9e;
+                    outline: none;
+                    height: 40px; 
+                    color: #262626;
+                    background-color: transparent;
+                    font-size: 1.6rem;
+                    box-sizing: border-box;
+                    transition: border-bottom 0.2s ease-out;
                    &:focus {
                        border-bottom: 2px solid $color-green;
                    }
-                   &:not(:placeholder-shown) {
+                   &:placeholder-shown {
                        border-color: $color-red;
                    }
                    &:not(:placeholder-shown) + label {
                         transform: translateY(-17px);
                         left: -26px;
                    }
-                   &:invalid,
                    &:invalid {
                        border-color: $color-red;
                    }
-                   &:valid,
-                   &:valid {
-                       border-color: $color-green;
-                   }
+
                    &:focus + label,
                    &:focus + label {
                     transform: translateY(-17px);
@@ -124,7 +120,7 @@
                     }
                     &:not(:empty)  + label {
                         transform: translateY(-17px) !important;
-                        left: -26px !important;
+                        left: -26px !important;    
                     }
                 }
             }
